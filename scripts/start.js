@@ -7,11 +7,14 @@ process.env.NODE_ENV = 'development';
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
+// 使脚本在 unhandledRejection 时崩溃，而不是默默地忽略它们。 
+// 将来，未处理的 promise reject 将以非零退出代码终止Node.js进程
 process.on('unhandledRejection', err => {
   throw err;
 });
 
 // Ensure environment variables are read.
+// 保证环境变量的读取
 require('../config/env');
 
 
