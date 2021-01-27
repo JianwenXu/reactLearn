@@ -1,6 +1,7 @@
-import Form, { Field } from 'rc-field-form';
+import Form, { Field } from './components/Form';
+// import Form, { Field } from 'rc-field-form';
 import { useEffect } from 'react';
-import { Button, Input } from 'antd';
+import { Input } from 'antd'
 
 const nameRules = {
   required: true,
@@ -18,8 +19,8 @@ const ControlForm = () => {
     console.log('onFinish', val);
   }
 
-  const onFinishFailed = (val) => {
-    console.log('onFinishFaild', val);
+  const onFinishFailed = (err, val) => {
+    console.log('onFinishFaild', err, val);
   }
   
   useEffect(() => {
@@ -42,7 +43,7 @@ const ControlForm = () => {
         <Input placeholder="age" />
       </Field>
 
-      <Button htmlType="submit" type="primary">Submit</Button>
+      <button>Submit</button>
     </Form>
   );
 };
