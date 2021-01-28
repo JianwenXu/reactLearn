@@ -28,7 +28,7 @@ class FormStore {
 
   setFieldEntities = (field) => {
     this.fieldEntities.push(field)
-    if (field.props.rules) {
+    if (field.props.rules && field.props.rules.length) {
       this.setValidateFields({
         [field.props.name]: field.props.rules
       })
