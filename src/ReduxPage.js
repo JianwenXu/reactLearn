@@ -11,13 +11,15 @@ class ReduxPage extends Component {
 
   onAdd = () => {
     store.dispatch({
-      type: 'ADD'
+      type: 'ADD',
+      payload: 20
     })
   }
 
   onMinus = () => {
     store.dispatch({
-      type: 'MINUS'
+      type: 'MINUS',
+      payload: 5
     })
   }
 
