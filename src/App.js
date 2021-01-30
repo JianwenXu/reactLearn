@@ -1,4 +1,5 @@
-import ControlForm from './ControlForm'
+import ControlForm from './ControlForm' // 受控分form
+import ReduxPage from './ReduxPage';
 import './App.css'
 
 // JSX 里面渲染一个数组的时候必须有 key
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       这是首页
       <ControlForm />
+      <ReduxPage />
     </div>
   );
 }
